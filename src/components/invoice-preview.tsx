@@ -37,7 +37,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({
   return (
     <Card ref={ref} className="p-4 sm:p-8 shadow-lg invoice-preview bg-white text-black font-sans">
       <CardContent className="p-0">
-        <header className="flex justify-between items-start pb-4 sm:pb-8">
+        <header className="flex flex-col sm:flex-row justify-between items-start gap-4 pb-4 sm:pb-8">
           <div className="flex-1 flex items-center gap-4">
              {logo ? (
                 <div className="w-36 h-36 sm:w-40 sm:h-40 relative">
@@ -60,7 +60,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({
         <Separator className="my-4 sm:my-6 bg-gray-200" />
 
         <section className="pb-4 sm:pb-8">
-             <div className="grid grid-cols-2 gap-4">
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                     <h2 className="font-semibold font-headline text-sm mb-1 text-gray-500">COBRANÇA PARA</h2>
                     <p className="font-bold text-2xl sm:text-3xl">{invoice.clientName || 'Nome do Cliente'}</p>

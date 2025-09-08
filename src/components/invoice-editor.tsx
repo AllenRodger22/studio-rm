@@ -115,13 +115,16 @@ export const InvoiceEditor: FC<InvoiceEditorProps> = ({ invoice, onInvoiceChange
           </CardHeader>
           <CardContent className="space-y-4">
             {fields.map((field, index) => (
-              <div key={field.id} className="grid grid-cols-12 gap-2 items-end p-3 border rounded-md">
-                <div className="col-span-2 space-y-1">
+              <div
+                key={field.id}
+                className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-2 items-end p-3 border rounded-md"
+              >
+                <div className="col-span-12 md:col-span-2 space-y-1">
                     <FormField name={`items.${index}.ref`} control={form.control} render={({ field }) => (
                       <FormItem><FormLabel className={index !== 0 ? 'sr-only' : ''}>Referência</FormLabel><FormControl><Input placeholder="Referência" {...field} /></FormControl><FormMessage /></FormItem>
                     )} />
                 </div>
-                <div className="col-span-10 space-y-1">
+                <div className="col-span-12 md:col-span-7 space-y-1">
                     <FormField name={`items.${index}.description`} control={form.control} render={({ field }) => (
                       <FormItem><FormLabel className={index !== 0 ? 'sr-only' : ''}>Descrição</FormLabel><FormControl><Input placeholder="Descrição do item" {...field} /></FormControl><FormMessage /></FormItem>
                     )} />
@@ -155,13 +158,21 @@ export const InvoiceEditor: FC<InvoiceEditorProps> = ({ invoice, onInvoiceChange
                     <FormItem><FormLabel>Valor Unit. (R$)</FormLabel><FormControl><Input type="number" step="0.01" placeholder="10,00" {...field} onChange={e => handleNumericInput(field, e.target.value)} /></FormControl><FormMessage /></FormItem>
                   )} />
                 </div>
-                 <div className="col-span-3 space-y-1">
+                 <div className="col-span-12 md:col-span-2 space-y-1">
                   <FormField name={`items.${index}.total`} control={form.control} render={({ field }) => (
                     <FormItem><FormLabel>Valor Final (R$)</FormLabel><FormControl><Input type="number" step="0.01" {...field} onChange={e => handleNumericInput(field, e.target.value)} /></FormControl><FormMessage /></FormItem>
                   )} />
                 </div>
-                <div className="col-span-1 flex items-center">
-                    <Button type="button" variant="ghost" size="icon" className="text-destructive w-full" onClick={() => remove(index)}><Trash2 className="w-4 h-4" /></Button>
+                <div className="col-span-12 md:col-span-1 flex md:items-end">
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="icon"
+                      className="text-destructive md:w-full ml-auto"
+                      onClick={() => remove(index)}
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </Button>
                 </div>
               </div>
             ))}
