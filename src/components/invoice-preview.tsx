@@ -51,7 +51,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({
             {/* Nome da empresa removido: a logo substitui o texto */}
           </div>
           <div className="text-right">
-            <h1 className="text-lg font-semibold font-headline text-blue-600">Nota de pagamento</h1>
+            <h1 className="text-base font-semibold font-headline text-blue-600">Nota de pagamento</h1>
             <p className="text-xs text-gray-500 break-all mt-1">Ref: {invoice.invoiceNumber}</p>
             <p className="text-sm text-gray-500 mt-1">{formatDate(invoice.issueDate)}</p>
           </div>
@@ -62,7 +62,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({
         <section className="pb-4 sm:pb-8">
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <h2 className="font-semibold font-headline text-sm mb-1 text-gray-500">COBRANÇA PARA</h2>
+                    <h2 className="font-semibold font-headline text-sm mb-1 text-gray-500">POR CLIENTE</h2>
                     <p className="font-bold text-2xl sm:text-3xl">{invoice.clientName || 'Nome do Cliente'}</p>
                 </div>
                  <div className="text-right">
@@ -79,7 +79,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({
                 <TableRow className="bg-gray-100 hover:bg-gray-100">
                   <TableHead className="font-headline text-gray-600">REF.</TableHead>
                   <TableHead className="font-headline text-gray-600">DESCRIÇÃO</TableHead>
-                  <TableHead className="text-right font-headline text-blue-600">VALOR FINAL</TableHead>
+                  <TableHead className="text-right font-headline text-gray-600">VALOR FINAL</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
