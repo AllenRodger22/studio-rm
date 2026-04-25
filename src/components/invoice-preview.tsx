@@ -12,6 +12,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
+const CNPJ = '64.539.517/0001-36';
+
 interface InvoicePreviewProps {
   invoice: Invoice;
   logo: string | null;
@@ -53,6 +55,8 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({
           <div className="text-right">
             <h1 className="text-base font-semibold font-headline text-blue-600">Nota de pagamento</h1>
             <p className="text-xs text-gray-500 break-all mt-1">Ref: {invoice.invoiceNumber}</p>
+            <p className="text-lg text-gray-700 mt-1" style={{ fontFamily: 'cursive' }}>Rosania Modelista</p>
+             <p className="text-sm text-gray-500 mt-1">CNPJ: {CNPJ}</p> 
             <p className="text-sm text-gray-500 mt-1">{formatDate(invoice.issueDate)}</p>
           </div>
         </header>
