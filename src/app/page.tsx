@@ -40,6 +40,7 @@ const createDefaultInvoice = (defaultCompanyName: string): Invoice => ({
   pricePerMeter: 0,
   deliveryFee: 0,
   adjustment: 0,
+  cnpj: "numero do cnpj'
 });
 
 const Page: FC = () => {
