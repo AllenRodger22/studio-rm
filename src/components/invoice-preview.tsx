@@ -10,7 +10,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
-const CNPJ = '64.539.517/0001-36';
+const CPF = '857.154.093-49';
 
 interface InvoicePreviewProps {
   invoice: Invoice;
