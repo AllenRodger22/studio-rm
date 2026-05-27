@@ -62,7 +62,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(({
             <h1 className="text-lg font-semibold text-blue-600">Nota de pagamento</h1>
             <p className="text-xs text-gray-500 mt-1">Ref: {invoice.invoiceNumber}</p>
             <p className="text-xl font-cursive text-gray-700 mt-1">Rosania Modelista</p>
-            <p className="text-sm text-gray-500">CNPJ: {CNPJ}</p>
+            <p className="text-sm text-gray-500">CPF: {CPF}</p>
             <p className="text-sm text-gray-500">{formatDate(invoice.issueDate)}</p>
           </div>
         </header>
